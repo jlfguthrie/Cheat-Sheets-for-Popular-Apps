@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapCut Shortcuts Cheat Sheet - Windows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
+            background: white;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #667eea;
+        }
+
+        .shortcuts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .shortcut-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .shortcut-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .shortcut-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .shortcut-item:last-child {
+            border-bottom: none;
+        }
+
+        .action {
+            font-weight: 500;
+            color: #2c3e50;
+            flex: 1;
+        }
+
+        .key {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-family: 'Segoe UI', Tahoma, monospace;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-left: 15px;
+            white-space: nowrap;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 15px 20px;
+            margin: 30px -20px 20px -20px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .category-header:first-child {
+            margin-top: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .version-info {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-align: right;
+        }
+
+        .author-info {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 1200px) {
+            .shortcuts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .shortcuts-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+
+            .version-info, .author-info {
+                position: static;
+                text-align: center;
+                margin-top: 15px;
+                font-size: 0.8rem;
+            }
+
+            .header {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            .shortcut-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CapCut Shortcuts - Windows</h1>
+            <p>Quick Reference Cheat Sheet</p>
+            <div class="author-info">Authored by John Guthrie</div>
+            <div class="version-info">v 1.0.1</div>
+        </div>
+        
+        <div class="content">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search shortcuts..." id="searchInput">
+            </div>
+            
+            <div class="shortcuts-grid" id="shortcutsContainer">
+                <div class="shortcut-card" data-category="editing">
+                    <div class="category-header">Editing & Timeline</div>
+                    <div class="shortcut-item" data-action="split clip">
+                        <span class="action">Split Clip</span>
+                        <span class="key">Ctrl + B</span>
+                    </div>
+                    <div class="shortcut-item" data-action="split all tracks">
+                        <span class="action">Split All Tracks</span>
+                        <span class="key">Ctrl + Shift + B</span>
+                    </div>
+                    <div class="shortcut-item" data-action="select mode">
+                        <span class="action">Select Mode</span>
+                        <span class="key">A</span>
+                    </div>
+                    <div class="shortcut-item" data-action="split mode">
+                        <span class="action">Split Mode</span>
+                        <span class="key">B</span>
+                    </div>
+                    <div class="shortcut-item" data-action="select to left">
+                        <span class="action">Select to Left</span>
+                        <span class="key">[</span>
+                    </div>
+                    <div class="shortcut-item" data-action="select to right">
+                        <span class="action">Select to Right</span>
+                        <span class="key">]</span>
+                    </div>
+                    <div class="shortcut-item" data-action="activate deactivate clip">
+                        <span class="action">Activate/Deactivate Clip</span>
+                        <span class="key">V</span>
+                    </div>
+                </div>
+
+                <div class="shortcut-card" data-category="navigation">
+                    <div class="category-header">Navigation & Playback</div>
+                    <div class="shortcut-item" data-action="play">
+                        <span class="action">Play</span>
+                        <span class="key">Space</span>
+                    </div>
+                    <div class="shortcut-item" data-action="previous frame">
+                        <span class="action">Previous Frame</span>
+                        <span class="key">←</span>
+                    </div>
+                    <div class="shortcut-item" data-action="next frame">
+                        <span class="action">Next Frame</span>
+                        <span class="key">→</span>
+                    </div>
+                    <div class="shortcut-item" data-action="step back many frames">
+                        <span class="action">Step Back Many Frames</span>
+                        <span class="key">Shift + ←</span>
+                    </div>
+                    <div class="shortcut-item" data-action="step forward many frames">
+                        <span class="action">Step Forward Many Frames</span>
+                        <span class="key">Shift + →</span>
+                    </div>
+                    <div class="shortcut-item" data-action="locate to first frame">
+                        <span class="action">Locate to First Frame</span>
+                        <span class="key">Home</span>
+                    </div>
+                    <div class="shortcut-item" data-action="locate to last frame">
+                        <span class="action">Locate to Last Frame</span>
+                        <span class="key">End</span>
+                    </div>
+                    <div class="shortcut-item" data-action="shuttle left">
+                        <span class="action">Shuttle Left</span>
+                        <span class="key">J</span>
+                    </div>
+                    <div class="shortcut-item" data-action="shuttle stop">
+                        <span class="action">Shuttle Stop</span>
+                        <span class="key">K</span>
+                    </div>
+                    <div class="shortcut-item" data-action="shuttle right">
+                        <span class="action">Shuttle Right</span>
+                        <span class="key">L</span>
+                    </div>
+                </div>
+
+                <div class="shortcut-card" data-category="markers">
+                    <div class="category-header">Markers & Points</div>
+                    <div class="shortcut-item" data-action="add marker">
+                        <span class="action">Add Marker</span>
+                        <span class="key">M</span>
+                    </div>
+                    <div class="shortcut-item" data-action="add marker with new color">
+                        <span class="action">Add Marker with New Color</span>
+                        <span class="key">Alt + M</span>
+                    </div>
+                    <div class="shortcut-item" data-action="go to next marker">
+                        <span class="action">Go to Next Marker</span>
+                        <span class="key">Shift + M</span>
+                    </div>
+                    <div class="shortcut-item" data-action="go to previous marker">
+                        <span class="action">Go to Previous Marker</span>
+                        <span class="key">Alt + Shift + M</span>
+                    </div>
+                    <div class="shortcut-item" data-action="set in point">
+                        <span class="action">Set In Point</span>
+                        <span class="key">I</span>
+                    </div>
+                    <div class="shortcut-item" data-action="set out point">
+                        <span class="action">Set Out Point</span>
+                        <span class="key">O</span>
+                    </div>
+                    <div class="shortcut-item" data-action="last cut point">
+                        <span class="action">Last Cut Point</span>
+                        <span class="key">↑</span>
+                    </div>
+                    <div class="shortcut-item" data-action="next cut point">
+                        <span class="action">Next Cut Point</span>
+                        <span class="key">↓</span>
+                    </div>
+                </div>
+
+                <div class="shortcut-card" data-category="view">
+                    <div class="category-header">View & Timeline</div>
+                    <div class="shortcut-item" data-action="zoom in">
+                        <span class="action">Zoom In</span>
+                        <span class="key">Ctrl + +</span>
+                    </div>
+                    <div class="shortcut-item" data-action="zoom out">
+                        <span class="action">Zoom Out</span>
+                        <span class="key">Ctrl + -</span>
+                    </div>
+                    <div class="shortcut-item" data-action="zoom to fit timeline">
+                        <span class="action">Zoom to Fit Timeline</span>
+                        <span class="key">Shift + Z</span>
+                    </div>
+                    <div class="shortcut-item" data-action="main track magnet">
+                        <span class="action">Main Track Magnet</span>
+                        <span class="key">P</span>
+                    </div>
+                    <div class="shortcut-item" data-action="auto snapping">
+                        <span class="action">Auto Snapping</span>
+                        <span class="key">N</span>
+                    </div>
+                    <div class="shortcut-item" data-action="switch linkage">
+                        <span class="action">Switch Linkage</span>
+                        <span class="key">~</span>
+                    </div>
+                    <div class="shortcut-item" data-action="switch preview axis">
+                        <span class="action">Switch Preview Axis</span>
+                        <span class="key">S</span>
+                    </div>
+                </div>
+
+                <div class="shortcut-card" data-category="selection">
+                    <div class="category-header">Selection & Grouping</div>
+                    <div class="shortcut-item" data-action="select by clip">
+                        <span class="action">Select by Clip</span>
+                        <span class="key">Shift + X</span>
+                    </div>
+                    <div class="shortcut-item" data-action="deselect">
+                        <span class="action">Deselect</span>
+                        <span class="key">Alt + X</span>
+                    </div>
+                    <div class="shortcut-item" data-action="group">
+                        <span class="action">Group</span>
+                        <span class="key">Ctrl + G</span>
+                    </div>
+                    <div class="shortcut-item" data-action="ungroup">
+                        <span class="action">Ungroup</span>
+                        <span class="key">Ctrl + Shift + G</span>
+                    </div>
+                    <div class="shortcut-item" data-action="create compound clip">
+                        <span class="action">Create Compound Clip</span>
+                        <span class="key">Alt + G</span>
+                    </div>
+                    <div class="shortcut-item" data-action="undo compound clip">
+                        <span class="action">Undo Compound Clip</span>
+                        <span class="key">Alt + Shift + G</span>
+                    </div>
+                </div>
+
+                <div class="shortcut-card" data-category="audio">
+                    <div class="category-header">Audio & Effects</div>
+                    <div class="shortcut-item" data-action="extract restore audio">
+                        <span class="action">Extract/Restore Audio</span>
+                        <span class="key">Ctrl + Shift + S</span>
+                    </div>
+                    <div class="shortcut-item" data-action="increase volume">
+                        <span class="action">Increase Volume by 0.1dB</span>
+                        <span class="key">Ctrl + .</span>
+                    </div>
+                    <div class="shortcut-item" data-action="decrease volume">
+                        <span class="action">Decrease Volume by 0.1dB</span>
+                        <span class="key">Ctrl + ,</span>
+                    </div>
+                    <div class="shortcut-item" data-action="show speed panel">
+                        <span class="action">Show Speed Panel</span>
+                        <span class="key">Ctrl + R</span>
+                    </div>
+                    <div class="shortcut-item" data-action="curve speed">
+                        <span class="action">Curve Speed</span>
+                        <span class="key">Shift + B</span>
+                    </div>
+                </div>
+
+                <div class="shortcut-card" data-category="advanced">
+                    <div class="category-header">Advanced Features</div>
+                    <div class="shortcut-item" data-action="delete left">
+                        <span class="action">Delete Left</span>
+                        <span class="key">Q</span>
+                    </div>
+                    <div class="shortcut-item" data-action="delete right">
+                        <span class="action">Delete Right</span>
+                        <span class="key">W</span>
+                    </div>
+                    <div class="shortcut-item" data-action="show hide keyframe panel">
+                        <span class="action">Show/Hide Keyframe Panel</span>
+                        <span class="key">Alt + K</span>
+                    </div>
+                    <div class="shortcut-item" data-action="add keyframe on panel">
+                        <span class="action">Add Keyframe on Panel</span>
+                        <span class="key">Shift + Click</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="no-results hidden" id="noResults">
+                <p>No shortcuts found matching your search.</p>
+            </div>
+
+            <div class="version-info">
+                Version: 1.0.0
+            </div>
+            <div class="author-info">
+                Author: Your Name
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.shortcut-card');
+            const noResults = document.getElementById('noResults');
+            let hasVisibleResults = false;
+
+            cards.forEach(card => {
+                const items = card.querySelectorAll('.shortcut-item');
+                let hasVisibleItems = false;
+
+                items.forEach(item => {
+                    const action = item.getAttribute('data-action');
+                    const actionText = item.querySelector('.action').textContent.toLowerCase();
+                    
+                    if (actionText.includes(searchTerm) || action.includes(searchTerm)) {
+                        item.classList.remove('hidden');
+                        hasVisibleItems = true;
+                        hasVisibleResults = true;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                if (hasVisibleItems) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            if (hasVisibleResults) {
+                noResults.classList.add('hidden');
+            } else {
+                noResults.classList.remove('hidden');
+            }
+        });
+
+        // Add keyboard shortcuts for the search
+        document.addEventListener('keydown', function(e) {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'f') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+    </script>
+</body>
+</html>

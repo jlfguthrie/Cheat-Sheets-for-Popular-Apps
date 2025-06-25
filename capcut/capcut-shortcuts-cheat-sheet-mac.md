@@ -2,7 +2,7 @@
 
 _Quick Reference Cheat Sheet_
 
-**Authored by John Guthrie** | **v 1.0.1**
+**Authored by [John Guthrie](https://github.com/jlfguthrie)** | **v 1.0.1**
 
 ---
 
@@ -103,6 +103,18 @@ _Quick Reference Cheat Sheet_
 - Use `⌘F` to search shortcuts in the HTML version
 - Most editing shortcuts work across all timeline tracks
 - Combine with other modifiers for advanced functionality
+
+---
+
+## 👨‍💻 About the Author
+
+Created by **[John Guthrie](https://github.com/jlfguthrie)** - A passionate developer who loves creating tools that make developers' lives easier. Always exploring new technologies and sharing knowledge with the community.
+
+### 🌟 Connect & Contribute
+
+- **GitHub Profile**: [jlfguthrie](https://github.com/jlfguthrie)
+- **Star This Repo**: [Cheat-Sheets-for-Popular-Apps](https://github.com/jlfguthrie/Cheat-Sheets-for-Popular-Apps)
+- **Suggest Improvements**: [Open an Issue](https://github.com/jlfguthrie/Cheat-Sheets-for-Popular-Apps/issues)
 
 ---
 

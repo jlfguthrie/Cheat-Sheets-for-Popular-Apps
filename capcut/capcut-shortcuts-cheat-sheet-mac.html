@@ -170,6 +170,65 @@
             opacity: 0.8;
         }
 
+        .author-info a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .author-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .footer p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 2px solid #4facfe;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            background: #4facfe;
+            color: white;
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 1200px) {
             .shortcuts-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -223,7 +282,7 @@
         <div class="header">
             <h1>CapCut Shortcuts - Mac</h1>
             <p>Quick Reference Cheat Sheet</p>
-            <div class="author-info">Authored by John Guthrie</div>
+            <div class="author-info">Authored by <a href="https://github.com/jlfguthrie" target="_blank">John Guthrie</a></div>
             <div class="version-info">v 1.0.1</div>
         </div>
         
@@ -452,6 +511,18 @@
             
             <div class="no-results hidden" id="noResults">
                 <p>No shortcuts found matching your search.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-content">
+                <h3>👨‍💻 About the Author</h3>
+                <p>Created by <strong>John Guthrie</strong> - A passionate developer who loves creating tools that make developers' lives easier. Always exploring new technologies and sharing knowledge with the community.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/jlfguthrie" target="_blank" class="footer-link">🐙 GitHub Profile</a>
+                    <a href="https://github.com/jlfguthrie/Cheat-Sheets-for-Popular-Apps" target="_blank" class="footer-link">⭐ Star This Repo</a>
+                    <a href="https://github.com/jlfguthrie/Cheat-Sheets-for-Popular-Apps/issues" target="_blank" class="footer-link">💬 Suggest Improvements</a>
+                </div>
             </div>
         </div>
     </div>
